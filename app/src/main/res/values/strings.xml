@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TDEE</string>
     <string name="app_title">TDEE</string>
+    <string name="button_text_login">login</string>
 </resources>
