@@ -46,4 +46,7 @@ dependencies {
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Floating edit text
+    implementation 'com.github.florent37:materialtextfield:1.0.7'
 }
