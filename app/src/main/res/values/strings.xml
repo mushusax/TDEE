@@ -6,4 +6,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="initialization_fragment">Initialization Fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="menu_item_configure">configure</string>
+    <string name="text_start_date">Select start date</string>
+    <string name="text_configuration_title">Select Your Starting Values</string>
+    <string name="default_date">Select Date</string>
 </resources>

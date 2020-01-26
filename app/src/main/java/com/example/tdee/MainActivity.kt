@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
@@ -19,7 +20,6 @@ import com.google.firebase.auth.FirebaseUser
 class MainActivity : AppCompatActivity() {
 
     private val RC_SIGN_IN = 123
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,6 +83,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     .isSuccessful
             }
+
             else -> {
                 super.onOptionsItemSelected(item)
             }
