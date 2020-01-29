@@ -22,10 +22,10 @@
 
     <Button
         android:id="@+id/button_start_date"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:text="@string/text_start_date"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +38,93 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/default_date"
+        android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_start_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_start_date" />
+
+    <EditText
+        android:id="@+id/text_initial_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/hint_initial_weight"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_date" />
+
+    <EditText
+        android:id="@+id/text_goal_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_goal_weight"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/text_initial_weight"
+        app:layout_constraintStart_toStartOf="@+id/text_initial_weight"
+        app:layout_constraintTop_toBottomOf="@+id/text_initial_weight" />
+
+    <Spinner
+        android:id="@+id/spinner_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_goal_weight"
+        app:layout_constraintStart_toStartOf="@+id/text_start_date"
+        app:layout_constraintTop_toTopOf="@+id/text_initial_weight" />
+
+    <Spinner
+        android:id="@+id/spinner_energy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_weight"
+        app:layout_constraintStart_toEndOf="@+id/spinner_weight"
+        app:layout_constraintTop_toTopOf="@+id/spinner_weight" />
+
+    <EditText
+        android:id="@+id/text_gain_per_week"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/hint_gain_per_week"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/text_goal_weight"
+        app:layout_constraintStart_toStartOf="@+id/text_goal_weight"
+        app:layout_constraintTop_toBottomOf="@+id/text_goal_weight" />
+
+    <View
+        android:id="@+id/divider_config"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/text_start_date"
+        app:layout_constraintStart_toStartOf="@+id/text_gain_per_week"
+        app:layout_constraintTop_toBottomOf="@+id/text_gain_per_week" />
+
+    <TextView
+        android:id="@+id/text_label_daily_surplus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_target_daily_surplus"
+        app:layout_constraintEnd_toEndOf="@+id/text_gain_per_week"
+        app:layout_constraintStart_toStartOf="@+id/divider_config"
+        app:layout_constraintTop_toBottomOf="@+id/divider_config" />
+
+    <TextView
+        android:id="@+id/text_target_daily_surplus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/text_label_daily_surplus"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_energy"
+        app:layout_constraintStart_toEndOf="@+id/text_label_daily_surplus"
+        app:layout_constraintTop_toTopOf="@+id/text_label_daily_surplus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
